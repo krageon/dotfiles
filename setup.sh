@@ -11,6 +11,8 @@
 [[ -h ~/.zshrc ]] && rm ~/.zshrc
 [[ -f ~/.zshrc ]] && mv ~/.zshrc ~/.zshrc.original
 
+[[ -d ~/.zgen ]] && rm -rf ~/.zgen
+
 ln -s ~/.dotfiles/.tmux.conf ~/.tmux.conf
 ln -s ~/.dotfiles/.vimrc ~/.vimrc
 ln -s ~/.dotfiles/.zshrc ~/.zshrc
