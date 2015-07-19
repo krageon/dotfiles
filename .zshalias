@@ -1,5 +1,0 @@
-function whc { ssh "tbazuin@webhosting$1.transip.nl"; }
-function whf { echo ${$(dig +short -x $(dig +short $1))%?}; }
-function whfc { ssh "tbazuin@$(whf $1)"; }
-function tipc { ssh "tbazuin@$1"; }
-alias blake="ssh tim@149.210.181.215"
