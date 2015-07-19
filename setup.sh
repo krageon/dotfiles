@@ -1,4 +1,7 @@
 #!/bin/bash
+git submodule init
+git submodule update
+
 [[ -h ~/.tmux.conf ]] && rm ~/.tmux.conf
 [[ -f ~/.tmux.conf ]] && mv ~/.tmux.conf ~/.tmux.conf.original
 
