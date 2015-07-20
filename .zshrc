@@ -1,6 +1,9 @@
 # User configuration
 export EDITOR='vim'
 
+export LC_CTYPE=en_US.UTF-8
+export LC_ALL=en_US.UTF-8
+
 # This apparently works everywhere. I could detect freebsd using freebsd*, and similar
 if [[ "$OSTYPE" == "cygwin"* || "$OSTYPE" == "mingw"* ]]; then
 	# On windows machines I use pageant, this passes it through to there. 
