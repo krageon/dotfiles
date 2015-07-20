@@ -16,6 +16,8 @@ git submodule update
 
 [[ -d ~/.zgen ]] && rm -rf ~/.zgen
 
+[[ -f ~/etc/DIR_COLORS && -f ~/.dircolors ]] && ln -s ~/.dotfiles/.dircolors ~/.dircolors
+
 ln -s ~/.dotfiles/.tmux.conf ~/.tmux.conf
 ln -s ~/.dotfiles/.vimrc ~/.vimrc
 ln -s ~/.dotfiles/.zshrc ~/.zshrc
