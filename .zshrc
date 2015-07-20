@@ -58,8 +58,11 @@ bindkey -M vicmd 'k' history-substring-search-up
 bindkey -M vicmd 'j' history-substring-search-down
 
 zstyle ':completion:*' menu select
-[ -f /etc/DIR_COLORS ] && eval $(dircolors -b /etc/DIR_COLORS)
-zstyle ':completion:*' list-colors ${(s.:.)LS_COLORS}
+[ -f /etc/DIR_COLORS ] && eval $(dircolors -b /etc/DIR_COLORS
+# LS_COLORS is defined, so something must have gone well there.
+[ -n "$LS_COLORS" ] && zstyle ':completion:*' list-colors ${(s.:.)LS_COLORS}
+# If it is not defined, we can still get colour using an empty string
+[ -z "$LS_COLORS" ] && zstyle ':completion:*' list-colors ""
 
 # Command history configuration
 if [ -z "$HISTFILE" ]; then
